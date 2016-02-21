@@ -1,47 +1,904 @@
 
 ==================== FINAL INTERFACE ====================
-2016-02-21 00:00:45.792533 UTC
+2016-02-21 19:37:06.210504 UTC
 
-interface propL_GXFnwXpsqZdIWA53NeoIZS:Definitions 7103
-  interface hash: 5910ce18c7ac816579714934b7557bd4
-  ABI hash: b78b82debd4aa2857ef903b3b2249474
-  export-list hash: f9a453ba7fd89fd5a76c8959f6c4851b
+interface propL_6wzAtHaZZUO1hWwh5IS660:Definitions 7103
+  interface hash: f2b4bb6aa8d898ccab04542c030ce24c
+  ABI hash: 9552543a1a7bf99eedc7f3a4e5a92e60
+  export-list hash: a7d29a432f5c563c35a5c02d7245d03e
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Definitions.someFunc
+  Definitions.areEnts
+  Definitions.areEventsDenotings
+  Definitions.consts
+  Definitions.ents
+  Definitions.events
+  Definitions.isEnt
+  Definitions.isEventDenoting
+  Definitions.ll
+  Definitions.llEnt
+  Definitions.llEnts
+  Definitions.llEvent
+  Definitions.llEvents
+  Definitions.prds
+  Definitions.prop_areEvents
+  Definitions.prop_commutativeAdd
+  Definitions.Const{Definitions.A Definitions.B Definitions.C}
+  Definitions.Domain{Definitions.Bottom Definitions.Entity Definitions.Event}
+  Definitions.PlExpression{Definitions.Con Definitions.Prd Definitions.R Definitions.Var}
+  Definitions.Predicate{Definitions.P1 Definitions.P2 Definitions.P3}
+  Definitions.Variable{Definitions.X Definitions.Y Definitions.Z}
 module dependencies:
-package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
-                      integer-gmp-1.0.0.0
+package dependencies: QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0*
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      data-ordlist-0.4.7.0@datao_JDklQnVb39MHNelBNWOZoM
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
 orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
 family instance modules: base-4.8.2.0:Control.Applicative
-                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
-                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s:Test.QuickCheck 437de8bc77c4cf58d9f8e24d5f1189e0
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
-import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
-import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-3469b7a881fec610b5aaa1a0385a37d5
-  someFunc :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <L,U>,
+import  -/  data-ordlist-0.4.7.0@datao_JDklQnVb39MHNelBNWOZoM:Data.List.Ordered 261f72306899f6321d53a359982b9aa5
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  integer-gmp-1.0.0.0:GHC.Integer.Type 371e90fe753f08ddedf0d2657a9ef5c4
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fEqConst :: GHC.Classes.Eq Definitions.Const
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Const
+                  Definitions.$fEqConst_$c==
+                  Definitions.$fEqConst_$c/= -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fEqConst_$c/= ::
+    Definitions.Const -> Definitions.Const -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Definitions.Const b :: Definitions.Const ->
+                 case a of wild {
+                   Definitions.A
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.A -> GHC.Types.False }
+                   Definitions.B
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.B -> GHC.Types.False }
+                   Definitions.C
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.C -> GHC.Types.False } }) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fEqConst_$c== ::
+    Definitions.Const -> Definitions.Const -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Definitions.Const ds1 :: Definitions.Const ->
+                 case ds of wild {
+                   Definitions.A
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.A -> GHC.Types.True }
+                   Definitions.B
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.B -> GHC.Types.True }
+                   Definitions.C
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.C -> GHC.Types.True } }) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fEqDomain :: GHC.Classes.Eq Definitions.Domain
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Domain
+                  Definitions.$fEqDomain_$c==
+                  Definitions.$fEqDomain_$c/= -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fEqDomain_$c/= ::
+    Definitions.Domain -> Definitions.Domain -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Definitions.Domain b :: Definitions.Domain ->
+                 case a of wild {
+                   Definitions.Entity a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Definitions.Entity b1
+                        -> case a1 of wild2 { GHC.Types.I# x ->
+                           case b1 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } } }
+                   Definitions.Event a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Definitions.Event b1
+                        -> case a1 of wild2 { GHC.Types.I# x ->
+                           case b1 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } } }
+                   Definitions.Bottom
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Definitions.Bottom -> GHC.Types.False } }) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fEqDomain_$c== ::
+    Definitions.Domain -> Definitions.Domain -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Definitions.Domain ds1 :: Definitions.Domain ->
+                 case ds of wild {
+                   Definitions.Entity a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Entity b1 -> GHC.Classes.eqInt a1 b1 }
+                   Definitions.Event a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Event b1 -> GHC.Classes.eqInt a1 b1 }
+                   Definitions.Bottom
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Bottom -> GHC.Types.True } }) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fEqPlExpression :: GHC.Classes.Eq Definitions.PlExpression
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.PlExpression
+                  Definitions.$fEqPlExpression_$c==
+                  Definitions.$fEqPlExpression_$c/= -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fEqPlExpression_$c/= ::
+    Definitions.PlExpression
+    -> Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Definitions.PlExpression b :: Definitions.PlExpression ->
+                 case Definitions.$fEqPlExpression_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fEqPlExpression_$c== ::
+    Definitions.PlExpression
+    -> Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Definitions.PlExpression
+                   ds1 :: Definitions.PlExpression ->
+                 case ds of wild {
+                   Definitions.Var a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Var b1 -> Definitions.$fEqPlExpression_$c==2 a1 b1 }
+                   Definitions.Con a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Con b1 -> Definitions.$fEqConst_$c== a1 b1 }
+                   Definitions.Prd a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.Prd b1 -> Definitions.$fEqPlExpression_$c==1 a1 b1 }
+                   Definitions.R a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Definitions.R b1 b2
+                        -> case a1 of wild2 {
+                             Definitions.P1
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Definitions.P1 -> Definitions.$fEqConst_$c== a2 b2 }
+                             Definitions.P2
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Definitions.P2 -> Definitions.$fEqConst_$c== a2 b2 }
+                             Definitions.P3
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Definitions.P3 -> Definitions.$fEqConst_$c== a2 b2 } } } }) -}
+64e031397cb4191bf79e3169044956ba
+  $fEqPlExpression_$c==1 ::
+    Definitions.Predicate -> Definitions.Predicate -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Definitions.Predicate ds1 :: Definitions.Predicate ->
+                 case ds of wild {
+                   Definitions.P1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.P1 -> GHC.Types.True }
+                   Definitions.P2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.P2 -> GHC.Types.True }
+                   Definitions.P3
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.P3 -> GHC.Types.True } }) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fEqPlExpression_$c==2 ::
+    Definitions.Variable -> Definitions.Variable -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Definitions.Variable ds1 :: Definitions.Variable ->
+                 case ds of wild {
+                   Definitions.X
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.X -> GHC.Types.True }
+                   Definitions.Y
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.Y -> GHC.Types.True }
+                   Definitions.Z
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Definitions.Z -> GHC.Types.True } }) -}
+64e031397cb4191bf79e3169044956ba
+  $fEqPredicate :: GHC.Classes.Eq Definitions.Predicate
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Predicate
+                  Definitions.$fEqPlExpression_$c==1
+                  Definitions.$fEqPredicate_$c/= -}
+64e031397cb4191bf79e3169044956ba
+  $fEqPredicate_$c/= ::
+    Definitions.Predicate -> Definitions.Predicate -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Definitions.Predicate b :: Definitions.Predicate ->
+                 case a of wild {
+                   Definitions.P1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.P1 -> GHC.Types.False }
+                   Definitions.P2
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.P2 -> GHC.Types.False }
+                   Definitions.P3
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.P3 -> GHC.Types.False } }) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fEqVariable :: GHC.Classes.Eq Definitions.Variable
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Variable
+                  Definitions.$fEqPlExpression_$c==2
+                  Definitions.$fEqVariable_$c/= -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fEqVariable_$c/= ::
+    Definitions.Variable -> Definitions.Variable -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Definitions.Variable b :: Definitions.Variable ->
+                 case a of wild {
+                   Definitions.X
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.X -> GHC.Types.False }
+                   Definitions.Y
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.Y -> GHC.Types.False }
+                   Definitions.Z
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Definitions.Z -> GHC.Types.False } }) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fShowConst :: GHC.Show.Show Definitions.Const
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Const
+                  Definitions.$fShowConst_$cshowsPrec
+                  Definitions.$fShowConst_$cshow
+                  Definitions.$fShowConst_$cshowList -}
+bd6b9d439a86fd10242a035ebbab47dd
+  $fShowConst1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "C"#) -}
+7ca8846491c8645f244989077a74834c
+  $fShowConst2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "B"#) -}
+5188c56e4274699079ab23948b5b9d28
+  $fShowConst3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "A"#) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fShowConst_$cshow :: Definitions.Const -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Definitions.Const ->
+                 case x of wild {
+                   Definitions.A -> Definitions.$fShowConst3
+                   Definitions.B -> Definitions.$fShowConst2
+                   Definitions.C -> Definitions.$fShowConst1 }) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fShowConst_$cshowList :: [Definitions.Const] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Definitions.Const
+                   Definitions.$w$cshowsPrec) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $fShowConst_$cshowsPrec ::
+    GHC.Types.Int -> Definitions.Const -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int
+                   w1 :: Definitions.Const
+                   w2 :: GHC.Base.String ->
+                 Definitions.$w$cshowsPrec w1 w2) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fShowDomain :: GHC.Show.Show Definitions.Domain
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Domain
+                  Definitions.$fShowDomain_$cshowsPrec
+                  Definitions.$fShowDomain_$cshow
+                  Definitions.$fShowDomain_$cshowList -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fShowDomain1 :: Definitions.Domain -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Definitions.$fShowDomain_$cshowsPrec
+                   Definitions.$fShowDomain2) -}
+51fc33d7f393969c5b2f692c924f5f09
+  $fShowDomain2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+533fa59428211c296c38b452773e1c02
+  $fShowDomain3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Bottom"#) -}
+e674c7eaf3bde41d3b8d85f107d4dece
+  $fShowDomain4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Event "#) -}
+4aaac28c3385d17b8307b728c54ee422
+  $fShowDomain5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Entity "#) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fShowDomain_$cshow :: Definitions.Domain -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Definitions.Domain ->
+                 Definitions.$fShowDomain_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fShowDomain_$cshowList :: [Definitions.Domain] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Definitions.Domain
+                   Definitions.$fShowDomain1) -}
+6b1c9feced2e53e0fa4bceb26de4235c
+  $fShowDomain_$cshowsPrec ::
+    GHC.Types.Int -> Definitions.Domain -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ a :: GHC.Types.Int
+                   ds :: Definitions.Domain
+                   eta :: GHC.Base.String ->
+                 case ds of wild {
+                   Definitions.Entity b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Definitions.$fShowDomain5
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11 ww3 eta of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Definitions.$fShowDomain5
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows8
+                                           eta) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }
+                   Definitions.Event b1
+                   -> case a of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Definitions.$fShowDomain4
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11 ww3 eta of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Definitions.$fShowDomain4
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows8
+                                           eta) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }
+                   Definitions.Bottom
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowDomain3 eta }) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fShowPlExpression :: GHC.Show.Show Definitions.PlExpression
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.PlExpression
+                  Definitions.$fShowPlExpression_$cshowsPrec
+                  Definitions.$fShowPlExpression_$cshow
+                  Definitions.$fShowPlExpression_$cshowList -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fShowPlExpression1 :: Definitions.PlExpression -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Definitions.PlExpression
+                   w1 :: GHC.Base.String ->
+                 Definitions.$w$cshowsPrec1 0 w w1) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fShowPlExpression_$cshow ::
+    Definitions.PlExpression -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Definitions.PlExpression ->
+                 Definitions.$fShowPlExpression_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fShowPlExpression_$cshowList ::
+    [Definitions.PlExpression] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Definitions.PlExpression
+                   Definitions.$fShowPlExpression1) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $fShowPlExpression_$cshowsPrec ::
+    GHC.Types.Int -> Definitions.PlExpression -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: Definitions.PlExpression
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Definitions.$w$cshowsPrec1 ww1 w1 w2 }) -}
+64e031397cb4191bf79e3169044956ba
+  $fShowPredicate :: GHC.Show.Show Definitions.Predicate
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Predicate
+                  Definitions.$fShowPredicate_$cshowsPrec
+                  Definitions.$fShowPredicate_$cshow
+                  Definitions.$fShowPredicate_$cshowList -}
+b9084da2129121f803ef400d2414b550
+  $fShowPredicate1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "P3"#) -}
+87ff413bf31666b09983b4c58dd9d0b7
+  $fShowPredicate2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "P2"#) -}
+35d69e895dc5b3e24fba71920bb770f7
+  $fShowPredicate3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "P1"#) -}
+64e031397cb4191bf79e3169044956ba
+  $fShowPredicate_$cshow :: Definitions.Predicate -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Definitions.Predicate ->
+                 case x of wild {
+                   Definitions.P1 -> Definitions.$fShowPredicate3
+                   Definitions.P2 -> Definitions.$fShowPredicate2
+                   Definitions.P3 -> Definitions.$fShowPredicate1 }) -}
+64e031397cb4191bf79e3169044956ba
+  $fShowPredicate_$cshowList ::
+    [Definitions.Predicate] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Definitions.Predicate
+                   Definitions.$w$cshowsPrec2) -}
+64e031397cb4191bf79e3169044956ba
+  $fShowPredicate_$cshowsPrec ::
+    GHC.Types.Int -> Definitions.Predicate -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int
+                   w1 :: Definitions.Predicate
+                   w2 :: GHC.Base.String ->
+                 Definitions.$w$cshowsPrec2 w1 w2) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fShowVariable :: GHC.Show.Show Definitions.Variable
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Definitions.Variable
+                  Definitions.$fShowVariable_$cshowsPrec
+                  Definitions.$fShowVariable_$cshow
+                  Definitions.$fShowVariable_$cshowList -}
+1c1995d555a1278107c002e8e2b2d12e
+  $fShowVariable1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Z"#) -}
+68925777fdec94e5b155661fbdf90cb6
+  $fShowVariable2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Y"#) -}
+fcd4235bd62b7915d2e536ae95179466
+  $fShowVariable3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "X"#) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fShowVariable_$cshow :: Definitions.Variable -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Definitions.Variable ->
+                 case x of wild {
+                   Definitions.X -> Definitions.$fShowVariable3
+                   Definitions.Y -> Definitions.$fShowVariable2
+                   Definitions.Z -> Definitions.$fShowVariable1 }) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fShowVariable_$cshowList ::
+    [Definitions.Variable] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Definitions.Variable
+                   Definitions.$w$cshowsPrec3) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $fShowVariable_$cshowsPrec ::
+    GHC.Types.Int -> Definitions.Variable -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int
+                   w1 :: Definitions.Variable
+                   w2 :: GHC.Base.String ->
+                 Definitions.$w$cshowsPrec3 w1 w2) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  $w$cshowsPrec ::
+    Definitions.Const -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Definitions.Const w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Definitions.A
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowConst3 w1
+                   Definitions.B
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowConst2 w1
+                   Definitions.C
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowConst1 w1 }) -}
+ef5a34c08856a422d2d9a9505c60ed7b
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> Definitions.PlExpression -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U><S,1*U><L,U>, Inline: [0] -}
+64e031397cb4191bf79e3169044956ba
+  $w$cshowsPrec2 ::
+    Definitions.Predicate -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Definitions.Predicate w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Definitions.P1
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowPredicate3 w1
+                   Definitions.P2
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowPredicate2 w1
+                   Definitions.P3
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Definitions.$fShowPredicate1
+                        w1 }) -}
+f268ddffcdd8d185d3265fd71a2a89f1
+  $w$cshowsPrec3 ::
+    Definitions.Variable -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Definitions.Variable w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Definitions.X
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowVariable3 w1
+                   Definitions.Y
+                   -> GHC.Base.++ @ GHC.Types.Char Definitions.$fShowVariable2 w1
+                   Definitions.Z
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Definitions.$fShowVariable1
+                        w1 }) -}
+7ad5126e68e7dd3abea0f1cb054a04aa
+  data Const = A | B | C
+    Promotable
+6b1c9feced2e53e0fa4bceb26de4235c
+  data Domain = Entity GHC.Types.Int | Event GHC.Types.Int | Bottom
+ef5a34c08856a422d2d9a9505c60ed7b
+  data PlExpression
+    = Var Definitions.Variable
+    | Con Definitions.Const
+    | Prd Definitions.Predicate
+    | R Definitions.Predicate Definitions.Const
+    Promotable
+64e031397cb4191bf79e3169044956ba
+  data Predicate = P1 | P2 | P3
+    Promotable
+f268ddffcdd8d185d3265fd71a2a89f1
+  data Variable = X | Y | Z
+    Promotable
+1de4ed8246994d3573d9b4d4e1a5ae41
+  areEnts :: [Definitions.PlExpression] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ xs :: [Definitions.PlExpression] ->
+                 case xs of wild {
+                   [] -> GHC.Types.False
+                   : ipv ipv1
+                   -> GHC.Classes.$fEq[]_$c==
+                        @ Definitions.PlExpression
+                        Definitions.$fEqPlExpression
+                        (GHC.List.filter @ Definitions.PlExpression Definitions.isEnt wild)
+                        wild }) -}
+dec9ca555712e8e0f5a5c3c969cf3f96
+  areEventsDenotings :: [Definitions.PlExpression] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ xs :: [Definitions.PlExpression] ->
+                 case xs of wild {
+                   [] -> GHC.Types.False
+                   : ipv ipv1
+                   -> GHC.Classes.$fEq[]_$c==
+                        @ Definitions.PlExpression
+                        Definitions.$fEqPlExpression
+                        (GHC.List.filter
+                           @ Definitions.PlExpression
+                           Definitions.isEventDenoting
+                           wild)
+                        wild }) -}
+908e3fee742dbf4f7f8d9c59c8feff0b
+  consts :: [Definitions.PlExpression]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.PlExpression
+                   Definitions.consts5
+                   Definitions.consts1) -}
+b0fd4d9366e57cb1d7e89f8b11b8d19f
+  consts1 :: [Definitions.PlExpression]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.PlExpression
+                   Definitions.consts4
+                   Definitions.consts2) -}
+63c51797f6b138f012c996b0865b530e
+  consts2 :: [Definitions.PlExpression]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.PlExpression
+                   Definitions.consts3
+                   (GHC.Types.[] @ Definitions.PlExpression)) -}
+19a3a6aa3f85b01a7322ff3464a95475
+  consts3 :: Definitions.PlExpression
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Definitions.Con Definitions.C) -}
+7fa0731c4fabed41f06a63153c69e9b7
+  consts4 :: Definitions.PlExpression
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Definitions.Con Definitions.B) -}
+5c3e452052572b67f2df40f6a0da02aa
+  consts5 :: Definitions.PlExpression
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Definitions.Con Definitions.A) -}
+6888ea9c4afad4737219dc5f8011210a
+  ents :: [Definitions.Domain]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.Domain
+                   Definitions.ents7
+                   Definitions.ents1) -}
+5457a9af345e02ba19d733438ec94cd8
+  ents1 :: [Definitions.Domain]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.Domain
+                   Definitions.ents5
+                   Definitions.ents2) -}
+fb9479f6f4b81328837967272d758022
+  ents2 :: [Definitions.Domain]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.Domain
+                   Definitions.ents3
+                   (GHC.Types.[] @ Definitions.Domain)) -}
+aa124c4baecc0edafa2256b7f6011803
+  ents3 :: Definitions.Domain
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Definitions.Entity Definitions.ents4) -}
+abdcbde22a1cd19e481e471a34d53503
+  ents4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3) -}
+95e3a9546e397a34a4900d7c1d1e0006
+  ents5 :: Definitions.Domain
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Definitions.Entity Definitions.ents6) -}
+c04b1fa714ebcfc04f04ab17fbbbb9b3
+  ents6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2) -}
+16f93ed2fb6310392799d9a73c5f0a5d
+  ents7 :: Definitions.Domain
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Definitions.Entity Definitions.ents8) -}
+fa81012c07a2dfcdbe3effbfa7053d6f
+  ents8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1) -}
+abe994aeff43b1156c5076dc728bbf13
+  events :: [Definitions.Domain]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.Domain
+                   Definitions.isEnt2
+                   Definitions.events1) -}
+8d046b201c92bdd358b855afe5ca47f9
+  events1 :: [Definitions.Domain]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.Domain
+                   Definitions.isEnt1
+                   (GHC.Types.[] @ Definitions.Domain)) -}
+6e30a5d9887c04e824201d74fcd773ad
+  isEnt :: Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U>,
+     Unfolding: (\ x :: Definitions.PlExpression ->
+                 GHC.List.elem
+                   @ Definitions.Domain
+                   Definitions.$fEqDomain
+                   (case x of wild {
+                      DEFAULT -> Definitions.Bottom
+                      Definitions.Con ds
+                      -> case ds of wild1 {
+                           Definitions.A -> Definitions.ents7
+                           Definitions.B -> Definitions.ents5
+                           Definitions.C -> Definitions.ents3 }
+                      Definitions.Prd ds
+                      -> case ds of wild1 {
+                           Definitions.P1 -> Definitions.isEnt2
+                           Definitions.P2 -> Definitions.isEnt1
+                           Definitions.P3 -> Definitions.Bottom } })
+                   Definitions.ents) -}
+d8870339e6ebf5991cd2d4997df79a86
+  isEnt1 :: Definitions.Domain
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Definitions.Event Definitions.ents6) -}
+6afc63e4ab3586ddcd024c37ee352dcd
+  isEnt2 :: Definitions.Domain
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Definitions.Event Definitions.ents8) -}
+2cfb40b8ed01ac287e50fe2e9aa7357a
+  isEventDenoting :: Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U>,
+     Unfolding: (\ x :: Definitions.PlExpression ->
+                 GHC.List.elem
+                   @ Definitions.Domain
+                   Definitions.$fEqDomain
+                   (case x of wild {
+                      DEFAULT -> Definitions.Bottom
+                      Definitions.Con ds
+                      -> case ds of wild1 {
+                           Definitions.A -> Definitions.ents7
+                           Definitions.B -> Definitions.ents5
+                           Definitions.C -> Definitions.ents3 }
+                      Definitions.Prd ds
+                      -> case ds of wild1 {
+                           Definitions.P1 -> Definitions.isEnt2
+                           Definitions.P2 -> Definitions.isEnt1
+                           Definitions.P3 -> Definitions.Bottom } })
+                   Definitions.events) -}
+edb9190e2d6f3c72613aba3af123dc36
+  ll :: Definitions.PlExpression -> Definitions.Domain
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ ds :: Definitions.PlExpression ->
+                 case ds of wild {
+                   DEFAULT -> Definitions.Bottom
+                   Definitions.Con ds1
+                   -> case ds1 of wild1 {
+                        Definitions.A -> Definitions.ents7
+                        Definitions.B -> Definitions.ents5
+                        Definitions.C -> Definitions.ents3 }
+                   Definitions.Prd ds1
+                   -> case ds1 of wild1 {
+                        Definitions.P1 -> Definitions.isEnt2
+                        Definitions.P2 -> Definitions.isEnt1
+                        Definitions.P3 -> Definitions.Bottom } }) -}
+702d2be9d76ac29a83deb9d519eb5abb
+  llEnt :: Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U>,
+     Unfolding: InlineRule (0, True, True) Definitions.isEnt -}
+783b84eced9a57dde24221ae075bdbd1
+  llEnts :: [Definitions.PlExpression] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True) Definitions.areEnts -}
+4d05fa2ea8e9e73bd42bfe1e4ed93443
+  llEvent :: Definitions.PlExpression -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,1*U>,
      Unfolding: InlineRule (0, True, True)
-                Definitions.someFunc1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-2d0b3faccdc9c370273e42d0f6fd5299
-  someFunc1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <L,U>,
-     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Definitions.someFunc2
-                   GHC.Types.True
-                   eta) -}
-b00b66d55391c4553adfa0d7ea4f4097
-  someFunc2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "someFunc"#) -}
+                Definitions.isEventDenoting -}
+d3f99eedbd5187efe640290c30debf8a
+  llEvents :: [Definitions.PlExpression] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Definitions.areEventsDenotings -}
+38ca03798ea09d9cdda57a13f2aaa01a
+  prds :: [Definitions.PlExpression]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.PlExpression
+                   Definitions.prds3
+                   Definitions.prds1) -}
+66283d9e7aa2caa7bfa08e9ed8b65e3a
+  prds1 :: [Definitions.PlExpression]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Definitions.PlExpression
+                   Definitions.prds2
+                   (GHC.Types.[] @ Definitions.PlExpression)) -}
+fa95e3169f2f32ccadcbe5e3cf81ec1f
+  prds2 :: Definitions.PlExpression
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Definitions.Prd Definitions.P2) -}
+8e829d1caf9ff1bc6ad4030b51f55216
+  prds3 :: Definitions.PlExpression
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Definitions.Prd Definitions.P1) -}
+f0d1c1ada86f02aa19532e22fd220150
+  prop_areEvents :: [Definitions.PlExpression] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Definitions.areEventsDenotings -}
+e94cfa89416e71033e09b2f4780b8667
+  prop_commutativeAdd ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ n :: GHC.Integer.Type.Integer
+                   m :: GHC.Integer.Type.Integer ->
+                 case GHC.Integer.Type.eqInteger#
+                        (GHC.Integer.Type.plusInteger n m)
+                        (GHC.Integer.Type.plusInteger m n) of wild { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool wild }) -}
+instance GHC.Classes.Eq [Definitions.Const] = Definitions.$fEqConst
+instance GHC.Classes.Eq [Definitions.Domain]
+  = Definitions.$fEqDomain
+instance GHC.Classes.Eq [Definitions.PlExpression]
+  = Definitions.$fEqPlExpression
+instance GHC.Classes.Eq [Definitions.Predicate]
+  = Definitions.$fEqPredicate
+instance GHC.Classes.Eq [Definitions.Variable]
+  = Definitions.$fEqVariable
+instance GHC.Show.Show [Definitions.Const]
+  = Definitions.$fShowConst
+instance GHC.Show.Show [Definitions.Domain]
+  = Definitions.$fShowDomain
+instance GHC.Show.Show [Definitions.PlExpression]
+  = Definitions.$fShowPlExpression
+instance GHC.Show.Show [Definitions.Predicate]
+  = Definitions.$fShowPredicate
+instance GHC.Show.Show [Definitions.Variable]
+  = Definitions.$fShowVariable
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

@@ -10,47 +10,73 @@ prop_commutativeAdd n m = n + m == m + n
 
 
 
-data PLExpression = Var Variable | Con Const | Prd Predicate | R Predicate Const deriving (Eq,Show)
+data PlExpression = Var Variable | Con Const | Prd Predicate | R Predicate Const deriving (Eq,Show)
 data Variable  = X | Y | Z deriving (Eq,Show)
 data Const     = A | B | C deriving (Eq,Show)
 data Predicate = P1 | P2 | P3 deriving (Eq,Show)
 
 
--- data Domain = Entz [Int] | DoubleBrackets Interpretation
+-- data Domain = Entz [Int] | ll Interpretation
 
 -- data Interpretation =
 
-data Domain = Entity Int | Event Int deriving (Eq,Show)
+data Domain = Entity Int | Event Int | Bottom deriving (Eq,Show)
+
+-- assignmentFn :: PlExpression -> Domain
+-- assignmentFn (Var x) = Entity 1
 
 
-assignmentFn :: PLExpression -> Domain
-assignmentFn (Var x) = Entity 1
+-- A sub-model (events, ents, prds, consts)
 
-intendedInterpretation :: PLExpression -> Domain
-intendedInterpretation (Con A)  = Entity 1
-intendedInterpretation (Con B)  = Entity 2
-intendedInterpretation (Con C)  = Entity 3
-intendedInterpretation (Prd P1) = Event 1
-intendedInterpretation (Prd P2) = Event 2
+events = [Event 1, Event 2]
+ents   = [Entity 1, Entity 2, Entity 3]
+prds   = [Prd P1, Prd P2]
+consts = [Con A, Con B, Con C]
 
-isEvent :: PLExpression -> Bool
-isEvent x =
+
+-- denotation brackets
+-- partial & ad hoc
+
+ll :: PlExpression -> Domain
+ll (Con A)  = Entity 1
+ll (Con B)  = Entity 2
+ll (Con C)  = Entity 3
+ll (Prd P1) = Event 1
+ll (Prd P2) = Event 2
+ll _        = Bottom
+
+
+-- what's my denotation? helpers
+
+llEvent = isEventDenoting
+isEventDenoting :: PlExpression -> Bool
+isEventDenoting x =
   let events = [Event 1, Event 2]
-    in intendedInterpretation x `elem` events
+    in ll x `elem` events
 
-areEvents [x] = filter isEvent [x]
+llEvents = areEventsDenotings
+areEventsDenotings :: [PlExpression] -> Bool
+areEventsDenotings xs = case xs of
+  [] -> False
+  _ -> filter llEvent xs == xs
 
--- isEventEvents :: [PLExpression] -> Bool
--- isEventEvents xs = let events = [Event 1, Event 2]
---                             in filter (\z -> (z `elem` events)) xs == []       -- not written in the most declarative way
-                            --
-                            -- (map intendedInterpretation xs) `subset` events
-  -- not (intendedInterpretation `  ` `elem` [(Entity 1), (Entity 2)])
 
---elem
--- QUICKCHECK TIME
+llEnt = isEnt
+isEnt :: PlExpression -> Bool
+isEnt x =
+  let ents = [Entity 1, Entity 2, Entity 3]
+    in ll x `elem` ents
+
+llEnts = areEnts
+areEnts :: [PlExpression] -> Bool
+areEnts xs = case xs of
+  [] -> False
+  _  -> filter isEnt xs == xs
+
+prop_areEvents = llEvents
+
 -- prop_eventsEvents :: [PLExpression] -> Boolaean | True iff every Prd _ expression is an Event _
--- prop_eventsEvents (Prd x) = intendedInterpretation (Prd x) == \y -> ($) Event y 1
+-- prop_eventsEvents (Prd x) = ll (Prd x) == \y -> ($) Event y 1
 
 
--- intendedInterpretation (Prd x) = \y -> Event y
+-- ll (Prd x) = \y -> Event y

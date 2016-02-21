@@ -17,7 +17,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/bin"
-libdir     = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/lib/x86_64-osx-ghc-7.10.3/propLogic-0.1.0.0-GXFnwXpsqZdIWA53NeoIZS"
+libdir     = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/lib/x86_64-osx-ghc-7.10.3/propLogic-0.1.0.0-6wzAtHaZZUO1hWwh5IS660"
 datadir    = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/share/x86_64-osx-ghc-7.10.3/propLogic-0.1.0.0"
 libexecdir = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/libexec"
 sysconfdir = "/Users/Alex/Dropbox/data1/SPRING16/HASKELL/PropLogic/propLogic/.stack-work/install/x86_64-osx/lts-5.0/7.10.3/etc"

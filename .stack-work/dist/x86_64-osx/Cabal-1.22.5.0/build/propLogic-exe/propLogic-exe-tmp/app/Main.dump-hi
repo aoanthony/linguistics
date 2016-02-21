@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-02-21 00:00:47.714341 UTC
+2016-02-21 19:37:09.947238 UTC
 
 interface main@main:Main 7103
-  interface hash: a0c522eebd14ffab872883bee41f3c50
-  ABI hash: 1acf82b819b9d2a9e184fb677b9f673c
-  export-list hash: 8f4e03764fc5bd2edd3b01234580a7ba
+  interface hash: f85695b59ff6ec650f7e736ae99ba2db
+  ABI hash: 56fe83c5621ee58db33a1eb19054d731
+  export-list hash: 28975ec8c1e45d8435eb0297361f918c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: c715c06aafafd41ef0f1d18c6301eaff
   sig of: Nothing
@@ -14,16 +14,37 @@ interface main@main:Main 7103
 exports:
   Main.main
 module dependencies:
-package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
-                      integer-gmp-1.0.0.0 propLogic-0.1.0.0@propL_GXFnwXpsqZdIWA53NeoIZS
+package dependencies: QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0*
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      data-ordlist-0.4.7.0@datao_JDklQnVb39MHNelBNWOZoM
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      propLogic-0.1.0.0@propL_6wzAtHaZZUO1hWwh5IS660
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
 orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
 family instance modules: base-4.8.2.0:Control.Applicative
-                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
-                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-import  -/  propLogic-0.1.0.0@propL_GXFnwXpsqZdIWA53NeoIZS:Definitions b78b82debd4aa2857ef903b3b2249474
+import  -/  propLogic-0.1.0.0@propL_6wzAtHaZZUO1hWwh5IS660:Definitions 9552543a1a7bf99eedc7f3a4e5a92e60
 f1f11bf00f612ca31301684407078598
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
